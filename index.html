@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>CarMart</title>
+</head>
+
+<body>
+    <!-- ================== navbar ===================== -->
+    <div class="header">
+        <div class="navbar">
+
+
+            <img src="images/Logo.png" alt="">
+
+
+
+            <div class="country_select" id="country">
+                <div class="select">
+                    <p id="text"> Select your Country </p>
+                    <i class="fa-solid fa-angle-down" id="moving"></i>
+                </div>
+
+                <ul class="option_box" id="list">
+                    <li class="option" onclick="myfunc('Karachi')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p> Karachi </p>
+                    </li>
+                    <li class="option" onclick="myfunc('Lahore')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p> Lahore </p>
+                    </li>
+                    <li class="option" onclick="myfunc('Islamabad')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p> Islamabad </p>
+                    </li>
+                    <li class="option" onclick="myfunc('Peshawar')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p> Peshawar </p>
+                    </li>
+                    <li class="option" onclick="myfunc('Hyderabad')">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p> Hyderabad </p>
+                    </li>
+                </ul>
+
+            </div>
+
+
+
+            <div class="search_box">
+                <input type="text" class="searchclass" id="search" placeholder="Find used and new Cars">
+                <p>
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                </p>
+
+            </div>
+
+            <div class="language">
+                <p id="eng_tag"> English </p>
+                <ul class="urd_eng">
+                    <li onclick="mylanguage('English')"> English </li>
+                    <li onclick="mylanguage('Urdu')"> Urdu </li>
+                </ul>
+            </div>
+
+
+            <div class="message">
+                <i class="fa-regular fa-comment"></i>
+            </div>
+
+            <div class="message">
+                <i class="fa-regular fa-bell"></i>
+            </div>
+
+            <div class="profile">
+                <div class="myimg" id="myimgid">
+                    <img src="images/my_img.jpeg" alt="">
+                </div>
+
+                <div class="dropdown" id="dropdownid">
+                    <div class="nameandimg">
+                        <img src="images/my_img.jpeg" alt="">
+                        <p> Owais Ali </p>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-user"></i>
+                            <p> My Account </p>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-box"></i>
+                            <p> My Order </p>
+                        </li>
+
+                        <hr>
+
+                        <li>
+                            <i class="fa-solid fa-circle-question"></i>
+                            <p> Help </p>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-gear"></i>
+                            <p> Setting </p>
+                        </li>
+
+                        <hr>
+
+                        <li>
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <p> Log Out </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="selling_page">
+                <button>
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Sell</p>
+                </button>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <!-- ================== Ad 1 ===================== -->
+    <div class="ad_img">
+        <img src="images/ad1.png">
+        <i class="fa-regular fa-square-xmark" id="ad_icon"></i>
+    </div>
+
+    <!-- ================== Product ===================== -->
+
+    <div class="product">
+        <div class="firstrow" data-aos="fade-down-right">
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box1img.jpg" alt="">
+                <h2>43 lac</h2>
+                <p>Toyota Corolla 1.6 2021</p>
+                <div class="address_data">
+                    <p>Gulshan 13-D, Karachi</p>
+                    <p>Today</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box2img.jpg" alt="">
+                <h2>27 lac</h2>
+                <p>Auqa Hybrid 2020</p>
+                <div class="address_data">
+                    <p>FB Area, Karachi</p>
+                    <p>2 Days ago</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box3img.jpg" alt="">
+                <h2>31 lac</h2>
+                <p>Honda Civic 2018</p>
+                <div class="address_data">
+                    <p>Gulshan, Karachi</p>
+                    <p>Yesterday</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box4img.jpeg" alt="">
+                <h2>63 lac</h2>
+                <p>KIA Sportage 2022</p>
+                <div class="address_data">
+                    <p>Tariq Road, Karachi</p>
+                    <p>6 Days ago</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+        </div>
+
+
+        <div class="firstrow" data-aos="fade-down-right">
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box5img.jpg" alt="">
+                <h2>42 lac</h2>
+                <p>Honda Civic 2020</p>
+                <div class="address_data">
+                    <p>Bahria Town, Karachi</p>
+                    <p>Yesterday</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box6img.jpg" alt="">
+                <h2>19 lac</h2>
+                <p>Toyota Corolla 2017</p>
+                <div class="address_data">
+                    <p>Azizabad, Karachi</p>
+                    <p>Today</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box7img.jpg" alt="">
+                <h2>28 lac</h2>
+                <p>Honda Civic 2018</p>
+                <div class="address_data">
+                    <p>Gulshan Karachi</p>
+                    <p>3 Days ago</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box8img.jpg" alt="">
+                <h2>9 lac</h2>
+                <p>Suzuki Cultus 2011</p>
+                <div class="address_data">
+                    <p>Gulshan 13-D, Karachi</p>
+                    <p>Today</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+        </div>
+
+
+
+        <div class="firstrow "data-aos="fade-down-right">
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box9img.jpg" alt="">
+                <h2>31 lac</h2>
+                <p>Alsvin 2021</p>
+                <div class="address_data">
+                    <p>Saddar, Karachi</p>
+                    <p>Yesterday</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box10img.jpg" alt="">
+                <h2>3.2 lac</h2>
+                <p>Suzuki Mehran 1997</p>
+                <div class="address_data">
+                    <p>Surjani, Karachi</p>
+                    <p>3 Days ago</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box11img.jpg" alt="">
+                <h2>24 lac</h2>
+                <p>Toyota Aqua 2016</p>
+                <div class="address_data">
+                    <p>Gulshan 13-D, Karachi</p>
+                    <p>Yesterday</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box12img.jpg" alt="">
+                <h2>33 lac</h2>
+                <p>Toyota Vitz 2021</p>
+                <div class="address_data">
+                    <p>Nazimabad, Karachi</p>
+                    <p>4 Days ago</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+        </div>
+
+
+
+        <div class="firstrow " data-aos="fade-down-right">
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box13img.jpg" alt="">
+                <h2>32.5 lac</h2>
+                <p>Passo 2018</p>
+                <div class="address_data">
+                    <p>Maskan, Karachi</p>
+                    <p>Today</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box14img.jpg" alt="">
+                <h2>27 lac</h2>
+                <p>Mira 2020</p>
+                <div class="address_data">
+                    <p>Saddar, Karachi</p>
+                    <p>2 Days ago</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box15img.jpg" alt="">
+                <h2>3.7 lac</h2>
+                <p>Suzuki Mehran 1998</p>
+                <div class="address_data">
+                    <p>Korangi, Karachi</p>
+                    <p>7 Days ago</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+            <div class="box1">
+                <a href="#"></a>
+                <img src="images/box16img.jpg" alt="">
+                <h2>31 lac</h2>
+                <p>Toyota Prius 2018</p>
+                <div class="address_data">
+                    <p>Gulshan, Karachi</p>
+                    <p>Today</p>
+                </div>
+                <button class="b1">Buy</button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- ================== Load More ===================== -->
+
+    <div class="load_more">
+
+        <button id="load_more_id"> Load More </button>
+
+
+        <div class="load_more_products" id="load_more_products_id">
+
+            <div class="firstrow">
+
+                <div class="box1">
+                    <a href="#"></a>
+                    <img src="images/box17img.jpg" alt="">
+                    <h2>58 lac</h2>
+                    <p>Toyota Revo 2019</p>
+                    <div class="address_data">
+                        <p>Gulberg, Karachi</p>
+                        <p>1 Day ago</p>
+                    </div>
+                </div>
+
+                <div class="box1">
+                    <a href="#"></a>
+                    <img src="images/box18img.jpg" alt="">
+                    <h2>15 lac</h2>
+                    <p>Toyota Vitz 2012</p>
+                    <div class="address_data">
+                        <p>FB Area, Karachi</p>
+                        <p>5 Days ago</p>
+                    </div>
+                </div>
+
+               
+                <div class="box1">
+                    <a href="#"></a>
+                    <img src="images/box23img.jpg" alt="">
+                    <h2>48.7 lac</h2>
+                    <p>Honda Vezel 2019</p>
+                    <div class="address_data">
+                        <p>Gulberg, Karachi</p>
+                        <p>Yesterday</p>
+                    </div>
+                </div>
+
+                <div class="box1">
+                    <a href="#"></a>
+                    <img src="images/box20img.jpg" alt="">
+                    <h2>12 lac</h2>
+                    <p>Corolla 2007</p>
+                    <div class="address_data">
+                        <p>Nazimabad, Karachi</p>
+                        <p>6 Days ago</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="firstrow">
+
+                <div class="box1">
+                    <a href="#"></a>
+                    <img src="images/box21img.jpg" alt="">
+                    <h2>32 lac</h2>
+                    <p>Honda Civic 2016</p>
+                    <div class="address_data">
+                        <p>Bahria Town, Karachi</p>
+                        <p>6 Days ago</p>
+                    </div>
+                </div>
+
+                <div class="box1">
+                    <a href="#"></a>
+                    <img src="images/box22img.jpg" alt="">
+                    <h2>41 lac</h2>
+                    <p>Toyota Corolla 2021</p>
+                    <div class="address_data">
+                        <p>Azizabad, Karachi</p>
+                        <p>Yesterday</p>
+                    </div>
+                </div>
+                <div class="box1">
+                    <a href="#"></a>
+                    <img src="images/box19img.jpg" alt="">
+                    <h2>30.5 lac</h2>
+                    <p>toyota Prius 2010</p>
+                    <div class="address_data">
+                        <p>Aisha Manzil, Karachi</p>
+                        <p>Today</p>
+                    </div>
+                </div>
+
+                <div class="box1">
+                    <a href="#"></a>
+                    <img src="images/box7img.jpg" alt="">
+                    <h2>28 lac</h2>
+                    <p>Honda Civic 2018</p>
+                    <div class="address_data">
+                        <p>Gulshan Karachi</p>
+                        <p>3 Days ago</p>
+                    </div>
+                </div>
+
+                
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    
+    <!-- ================== Footer ===================== -->
+
+    
+    <div class="main_footer">
+        <div class="footer">
+
+            <div class="footer_box">
+                <h2>Contact Us</h2>
+                <p>Email: owaisaliaptech@gmail.com</p>
+                <p>Phone: 03323372764</p>
+                <p>Location: Near Tariq Road, Karachi</p>
+            </div>
+
+            <div class="footer_box">
+                <h2>About Us</h2>
+                <p>Leading Car Sellers</p>
+                <p>Karachi's top Car Seller</p>
+                <p>Buy Used and New Cars</p>
+            </div>
+
+            <div class="footer_box">
+                <h2>Car Mart</h2>
+                <img src="images/Logo.png" alt="">
+                <p>Buy your dream Car</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+  <script>
+    // ================== navbar js ===================== //
+    let country = document.getElementById('country');
+    let moving = document.getElementById('moving');
+    let text = document.getElementById('text');
+    let list = document.getElementById('list');
+    country.addEventListener('click', () => {
+        list.classList.toggle('hidden')
+        moving.classList.toggle('roted')
+
+    });
+    function myfunc(anyone) {
+        text.innerHTML = anyone;
+    }
+
+
+
+    let eng_tag = document.getElementById('eng_tag');
+    let urd_eng = document.querySelector('.urd_eng');
+    let language = document.querySelector('.language');
+    language.addEventListener('click', () => {
+        urd_eng.classList.toggle('display_div');
+    });
+    function mylanguage(owais) {
+        eng_tag.innerHTML = owais;
+    }
+
+    let myimgid = document.getElementById('myimgid');
+    let dropdownid = document.getElementById('dropdownid');
+    myimgid.addEventListener('click', () => {
+        dropdownid.classList.toggle('blackdiv')
+    });
+
+
+
+
+    // ================== Ad 1 js ===================== //
+
+    let ad_img = document.querySelector('.ad_img');
+    let ad_icon = document.getElementById('ad_icon');
+    ad_icon.addEventListener('click', () => {
+        ad_img.style = 'display:none';
+    });
+
+    
+    
+    // ================== Load More Js ===================== //
+
+    let load_more_id = document.getElementById('load_more_id');
+    
+    let load_more_products_id = document.getElementById('load_more_products_id');
+
+    load_more_id.addEventListener('click', () => {
+        load_more_products_id.style = 'display:block';
+        load_more_id.style= 'display:none';
+    });
+
+
+
+
+
+
+</script>
+</html>
