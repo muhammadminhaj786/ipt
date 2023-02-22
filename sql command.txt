@@ -1,0 +1,73 @@
+create database Carapp;
+use Carapp;
+create table Login(
+login_id int not null,
+login_username varchar(25),
+login_email varchar(20),
+login_password varchar(15),
+constraint pk1 primary key(login_id)
+);
+create table Customer(
+customer_id int not null,
+customer_name varchar(25),
+customer_email varchar(20),
+customer_address varchar(35),
+customer_phone int(11),
+login_id int,
+constraint pk2 primary key(customer_id),
+constraint fk1 foreign key(login_id) references Login(login_id)
+);
+create table Owner(
+owner_id int not null,
+owner_name varchar(25),
+owner_email varchar(20),
+owner_address varchar(35),
+owner_phone int(11),
+login_id int,
+constraint pk3 primary key(owner_id),
+constraint fk2 foreign key(login_id) references Login(login_id)
+);
+create table Vechicle(
+vechicle_id int not null,
+vechicle_name varchar(25),
+owner_id int,
+constraint pk4 primary key(vechicle_id),
+constraint fk3 foreign key(owner_id) references Owner(owner_id)
+);
+create table VechicleModel(
+VM_id int not null,
+vechicle_model varchar(25),
+vechicle_color varchar(15),
+vechicle_id int,
+constraint pk5 primary key(VM_id),
+constraint fk4 foreign key(vechicle_id) references Vechicle(vechicle_id)
+);
+create table VechicleCondition(
+VC_id int not null,
+vechicle_condition varchar(25),
+vechicle_star varchar(15),
+vechicle_engine varchar(20),
+vechicle_id int,
+constraint pk6 primary key(VC_id),
+constraint fk5 foreign key(vechicle_id) references Vechicle(vechicle_id)
+);
+create table Price(
+price_id int not null,
+vechicle_cost integer(20),
+vechicle_discount integer(15),
+vechicle_id int,
+owner_id int,
+constraint pk7 primary key(price_id),
+constraint fk6 foreign key(vechicle_id) references Vechicle(vechicle_id),
+constraint fk7 foreign key(owner_id) references Owner(owner_id)
+);
+create table Sales(
+sale_id int not null,
+customer_id int,
+vechicle_id int,
+owner_id int,
+constraint pk8 primary key(sale_id),
+constraint fk8 foreign key(vechicle_id) references Vechicle(vechicle_id),
+constraint fk9 foreign key(owner_id) references Owner(owner_id),
+constraint fk10 foreign key(customer_id) references Customer(customer_id)
+);

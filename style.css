@@ -268,6 +268,7 @@
     height: 45px;
     width: 150px;
     color: black;
+    border: 1px solid black;
     background-color: white;
 }
 .box1:hover{
@@ -322,8 +323,22 @@
 #load_more_products_id{
     display: none;
 }
-
-
+#load_more_products_id .b1{
+    height: 40px;
+    width: 130px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 60px;
+}
+#load_more_products_id .b1:hover{
+    height: 45px;
+    width: 150px;
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+}
    /*================== Footer =====================*/
 
 .main_footer{
